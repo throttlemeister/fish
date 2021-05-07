@@ -8,6 +8,7 @@ The prompt (fish_prompt.fish), based on Oh-My-Fish Bira theme and Kali Linux bas
 ### Functions
 **adguard.fish**          Log in to Primary AdGuard DNS via SSH\
 **apt.fish**              Alias for 'apt' to 'sudo apt' for Debian based hosts\
+**bootstrap.fish**        Bootstrap a new server using Ansible\
 **borr.fish**             Log in to host borr via SSH\
 **deploy.fish**           Deploy a new server using Ansible\
 **dnf.fish**              Alias for 'dnf' to 'sudo dnf' for RedHat based hosts\
