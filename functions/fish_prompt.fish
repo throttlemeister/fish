@@ -46,18 +46,6 @@ function __git_status
   end
 end
 
-function __ruby_version
-  if type "rvm-prompt" > /dev/null 2>&1
-    set ruby_version (rvm-prompt i v g)
-  else if type "rbenv" > /dev/null 2>&1
-    set ruby_version (rbenv version-name)
-  else
-    set ruby_version "system"
-  end
-
-  echo -n (set_color red) ‹$ruby_version› (set_color normal)
-end
-
 function fish_prompt
   if [ (id -u) = "0" ];
     echo -n (set_color --bold yellow)"╭─"(set_color normal)
@@ -66,7 +54,6 @@ function fish_prompt
   end
   __user_host
   __current_path
-#  __ruby_version
   __git_status
   echo -e ''
   if [ (id -u) = "0" ];
