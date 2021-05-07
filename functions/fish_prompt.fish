@@ -1,6 +1,10 @@
+# This theme is based on Bira theme from oh-my-fish (https://github.com/oh-my-fish/theme-bira)
+# This theme also based on the default bash prompt of Kali Linux. (https://www.kali.org/)
+# Created, modified and where possible bluntly stolen by throttlemeister.
+#
+# Bira theme from oh-my-fish listed abouve, based on:
 # Theme based on Bira theme from oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/bira.zsh-theme
 # Some code stolen from oh-my-fish clearance theme: https://github.com/bpinto/oh-my-fish/blob/master/themes/clearance/
-# changed and modified by throttlemeister
 
 function __user_host
   set fqdn (hostname -f)
@@ -8,7 +12,7 @@ function __user_host
   if [ (id -u) = "0" ];
     echo -n (set_color --bold yellow)\((set_color --bold red)$USER(set_color --bold yellow)💀(set_color --bold red)$fqdn(set_color --bold yellow)\) (set color normal)
   else
-    echo -n (set_color --bold blue)\((set_color --bold white)$USER(set_color --bold blue)㉿(set_color --bold white)$fqdn(set_color --bold blue)\) (set color normal)
+    echo -n (set_color --bold blue)\((set_color --bold white)$USER(set_color --bold blue)웃(set_color --bold white)$fqdn(set_color --bold blue)\) (set color normal)
   end
 end
 
