@@ -21,6 +21,7 @@ The prompt (fish_prompt.fish), based on Oh-My-Fish Bira theme and Kali Linux bas
 **hermod.fish**           Log in to host hermod via SSH\
 **l.fish**                Alias for 'ls'\
 **ll.fish**               Alias for 'ls -la'\
+**lt.fish**               Alias for 'ls -ltr'\
 **mani.fish**             Log in to host mani using SSH\
 **nas.fish**              Log in to the Synology NAS using SSH\
 **njord.fish**            Log in to host njord using SSH\
