@@ -1,4 +1,4 @@
 # Defined in - @ line 1
-function lt --wraps=ls --description 'alias lt ls -ltr'
-  ls -ltr $argv;
+function lt --wraps=exa --description 'alias lt exa -laa -snew'
+  exa -laa -snew $argv;
 end
