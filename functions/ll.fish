@@ -1,4 +1,8 @@
 # Defined in - @ line 1
-function ll --wraps='exa -laa' --description 'alias ll exa -laa'
-  exa -laa $argv;
+function ll
+  if test -e /usr/local/bin/exa
+    exa -laa $argv;
+  else
+    ls -la $argv;
+  end
 end
