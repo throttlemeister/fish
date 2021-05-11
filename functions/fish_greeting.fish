@@ -16,6 +16,12 @@ function fish_greeting
         cd $HOMEDIR
         cp $ONEDRIVE/$FILE .
         tar xvfz $FILE
-        echo "Profile reloaded."
+        clear
+        echo -e " Welcome to:"
+        figlet (hostname)
+        echo ""
+        inxi -S && inxi -a
+        echo ""
+        echo "Profile reloaded!"
     end
 end
