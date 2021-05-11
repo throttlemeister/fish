@@ -4,7 +4,7 @@ My setup of the Friendly Interactive SHell (fish)
 ### Prompt
 The prompt (fish_prompt), based on Oh-My-Fish Bira theme and the standard Kali Linux bash prompt.\
 \
-Bira theme from oh-my-fish (https://github.com/oh-my-fish/theme-bira) was based on Bira theme from oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/bira.zsh-theme) and the oh-my-fish Clearance theme (https://github.com/bpinto/oh-my-fish/blob/master/themes/clearance/)
+Bira theme from oh-my-fish (https://github.com/oh-my-fish/theme-bira) was based on Bira theme from oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/bira.zsh-theme) and the oh-my-fish Clearance theme (https://github.com/bpinto/oh-my-fish/blob/master/themes/clearance/)\
 \
 ![Alt text](https://www.sport-touring.eu/old/stuff/prompt.png "prompt")
 
@@ -26,6 +26,7 @@ File: functions/extract.fish\
 \
 **fish_greeting**    Welcome message when logging into the system\
 File: functions/fish_greeting.fish\
+This function contains custom code needed for myself to ensure my profile is synchronized between all the various WSL instances I have and use. You should remove or modify for your own application before use.\
 \
 **fish_prompt**      The fish prompt\
 File: functions/fish_prompt.fish\
