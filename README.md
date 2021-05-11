@@ -30,6 +30,10 @@ File: functions/fish_prompt.fish\
 **genprofile**       Generate and compress the profile files so it can be deployed\
 File: functions/genprofile.fish\
 \
+**grep**             Alias for grep to add color and line numbers\
+File: functions/grep.fish\
+This function checks if ripgrep (a replacement for grep written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard command.\
+\
 **harden**           Execute the system hardening tasks using Ansible\
 File: functions/harden.fish\
 \
@@ -39,7 +43,6 @@ File: functions/l.fish\
 File: functions/ll.fish\
 **lt**               Alias for 'ls -ltr'\
 File: functions/lt.fish\
-\
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
 **root**             Alias for 'sudo -i' to switch to root user\
