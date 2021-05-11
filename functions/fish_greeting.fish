@@ -6,4 +6,16 @@ function fish_greeting
     inxi -S && inxi -a
     #weather almelo
     echo ""
+    set HOMEDIR $HOME
+    set ONEDRIVE "/mnt/c/Users/throttlemeister/OneDrive/profile"
+    set FILE profile_wsl.tar.gz
+    
+    if cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/$FILE"
+        echo "Profile OK!"
+    else
+        echo "Reloading profile"
+        cd $HOMEDIR
+        cp $ONEDRIVE/$FILE .
+        tar xvfz $FILE
+    end
 end
