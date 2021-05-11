@@ -15,9 +15,11 @@ File: functions/apt.fish\
 \
 **bootstrap**        Bootstrap a new server using Ansible\
 File: functions/bootstrap.fish\
+Probably useless for anyone but myself.\
 \
 **deploy**           Deploy a new server using Ansible\
 File: functions/deploy.fish\
+Probably useless for anyone but myself.\
 \
 **dnf**              Alias for 'dnf' to 'sudo dnf' for RedHat based hosts\
 File: functions/dnf.fish\
@@ -34,6 +36,7 @@ File: functions/fish_prompt.fish\
 \
 **genprofile**       Generate and compress the profile files so it can be deployed\
 File: functions/genprofile.fish\
+Probably useless for anyone but myself.\
 \
 **grep**             Alias for grep to add color and line numbers\
 File: functions/grep.fish\
@@ -41,6 +44,7 @@ This function checks if ripgrep (a replacement for grep written in Rust) has bee
 \
 **harden**           Execute the system hardening tasks using Ansible\
 File: functions/harden.fish\
+Probably useless for anyone but myself.\
 \
 **l**                Alias for 'ls'\
 File: functions/l.fish\
@@ -55,6 +59,7 @@ File: functions/root.fish\
 \
 **update**           Update all hosts using Ansible\
 File: functions/update.fish\
+Probably useless for anyone but myself.\
 \
 **up**               Change a number of directories up\
 File: functions/up.fish\
