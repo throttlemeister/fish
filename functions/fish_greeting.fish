@@ -13,9 +13,9 @@ function fish_greeting
     if cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/$FILE"
         echo "Profile OK!"
     else
-        echo "Reloading profile"
         cd $HOMEDIR
         cp $ONEDRIVE/$FILE .
         tar xvfz $FILE
+        echo "Profile reloaded."
     end
 end
