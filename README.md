@@ -76,4 +76,4 @@ Usage: up <#_of_directories_to_go_up>\
 \
 **weather**          Display the weather on the shell\
 File: functions/weather.fish\
-Usage: weather <location>
+Usage: weather <weather_location>
