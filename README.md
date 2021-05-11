@@ -55,4 +55,4 @@ File: functions/update.fish\
 File: functions/up.fish\
 \
 **weather**          Display the weather on the shell\
-File: functions/weather.fish\
+File: functions/weather.fish
