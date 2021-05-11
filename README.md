@@ -15,9 +15,12 @@ The prompt (fish_prompt.fish), based on Oh-My-Fish Bira theme and Kali Linux bas
 **fish_prompt.fish**      The fish prompt\
 **genprofile.fish**       Generate and compress the profile files so it can be deployed\
 **harden.fish**           Execute the system hardening tasks using Ansible\
+\
 **l.fish**                Alias for 'ls'\
 **ll.fish**               Alias for 'ls -la'\
 **lt.fish**               Alias for 'ls -ltr'\
+These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
+\
 **root.fish**             Alias for 'sudo -i' to switch to root user\
 **update.fish**           Update all hosts using Ansible\
 **up.fish**               Change a number of directories up\
