@@ -10,9 +10,9 @@ function fish_greeting
     set ONEDRIVE "/mnt/c/Users/throttlemeister/OneDrive/profile"
     set FILE profile_wsl.tar.gz
     
-    if cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/$FILE"
+    if test -n "$WSL_INTEROP" && cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/$FILE"
         echo "Profile OK!"
-    else
+    else if test -n "$WSL_INTEROP"
         cd $HOMEDIR
         cp $ONEDRIVE/profile* .
         tar xvfz $FILE
@@ -23,5 +23,7 @@ function fish_greeting
         inxi -S && inxi -a
         echo ""
         echo "Profile reloaded!"
+    else
+        echo "Not on WSL"
     end
 end
