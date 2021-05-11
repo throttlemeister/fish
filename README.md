@@ -7,49 +7,49 @@ The prompt (fish_prompt), based on Oh-My-Fish Bira theme and Kali Linux bash pro
 
 ### Functions
 **apt**              Alias for 'apt' to 'sudo apt' for Debian based hosts\
-File: apt.fish\
+File: functions/apt.fish\
 \
 **bootstrap**        Bootstrap a new server using Ansible\
-File: bootstrap.fish\
+File: functions/bootstrap.fish\
 \
 **deploy**           Deploy a new server using Ansible\
-File: deploy.fish\
+File: functions/deploy.fish\
 \
 **dnf**              Alias for 'dnf' to 'sudo dnf' for RedHat based hosts\
-File: dnf.fish\
+File: functions/dnf.fish\
 \
 **extract**          Extract an archive, regardless of how it is compressed\
-File: extract.fish\
+File: functions/extract.fish\
 \
 **fish_greeting**    Welcome message when logging into the system\
-File: fish_greeting.fish\
+File: functions/fish_greeting.fish\
 \
 **fish_prompt**      The fish prompt\
-File: fish_prompt.fish\
+File: functions/fish_prompt.fish\
 \
 **genprofile**       Generate and compress the profile files so it can be deployed\
-File: genprofile.fish\
+File: functions/genprofile.fish\
 \
 **harden**           Execute the system hardening tasks using Ansible\
-File: harden.fish\
+File: functions/harden.fish\
 \
 **l**                Alias for 'ls'\
-File: l.fish\
+File: functions/l.fish\
 **ll**               Alias for 'ls -la'\
-File: ll.fish\
+File: functions/ll.fish\
 **lt**               Alias for 'ls -ltr'\
-File: lt.fish\
+File: functions/lt.fish\
 \
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
 **root**             Alias for 'sudo -i' to switch to root user\
-File: root.fish\
+File: functions/root.fish\
 \
 **update**           Update all hosts using Ansible\
-File: update.fish\
+File: functions/update.fish\
 \
 **up**               Change a number of directories up\
-File: up.fish\
+File: functions/up.fish\
 \
 **weather**          Display the weather on the shell\
-File: weather.fish\
+File: functions/weather.fish\
