@@ -12,7 +12,7 @@ Bira theme from oh-my-fish (https://github.com/oh-my-fish/theme-bira) was based 
 ### Functions
 **apt**              Alias for 'apt' to 'sudo apt' for Debian based hosts\
 File: functions/apt.fish\
-Usage: apt <packagename>\
+Usage: apt <package_name>\
 \
 **bootstrap**        Bootstrap a new server using Ansible\
 File: functions/bootstrap.fish\
@@ -24,7 +24,7 @@ Usage: deploy\
 \
 **dnf**              Alias for 'dnf' to 'sudo dnf' for RedHat based hosts\
 File: functions/dnf.fish\
-Usage: dnf <packagename>\
+Usage: dnf <package_name>\
 \
 **extract**          Extract an archive, regardless of how it is compressed\
 File: functions/extract.fish\
