@@ -53,13 +53,13 @@ Usage: harden\
 \
 **l**                Alias for 'ls'\
 File: functions/l.fish\
-Usage: l <directory>\
+Usage: l <directory_to_list>\
 **ll**               Alias for 'ls -la'\
 File: functions/ll.fish\
-Usage: ll <directory>\
+Usage: ll <directory_to_list>\
 **lt**               Alias for 'ls -ltr'\
 File: functions/lt.fish\
-Usage: lt <directory>\
+Usage: lt <directory_to_list>\
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
 **root**             Alias for 'sudo -i' to switch to root user\
