@@ -14,7 +14,7 @@ function fish_greeting
         echo "Profile OK!"
     else
         cd $HOMEDIR
-        cp $ONEDRIVE/$FILE .
+        cp $ONEDRIVE/profile* .
         tar xvfz $FILE
         clear
         echo -e " Welcome to:"
