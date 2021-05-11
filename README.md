@@ -28,7 +28,7 @@ Usage: dnf <package_name>\
 \
 **extract**          Extract an archive, regardless of how it is compressed\
 File: functions/extract.fish\
-Usage: extract <filename>\
+Usage: extract <file_name>\
 \
 **fish_greeting**    Welcome message when logging into the system\
 File: functions/fish_greeting.fish\
