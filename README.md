@@ -31,11 +31,15 @@ File: fish_prompt.fish\
 File: genprofile.fish\
 \
 **harden**           Execute the system hardening tasks using Ansible\
-harden.fish\
+File: harden.fish\
 \
 **l**                Alias for 'ls'\
+File: l.fish\
 **ll**               Alias for 'ls -la'\
+File: ll.fish\
 **lt**               Alias for 'ls -ltr'\
+File: lt.fish\
+\
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
 **root**             Alias for 'sudo -i' to switch to root user\
