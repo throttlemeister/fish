@@ -62,6 +62,10 @@ File: functions/lt.fish\
 Usage: lt <directory_to_list>\
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
+**push_profile**     Push updated user profiles to all servers using Ansible\
+File: functions/push_profile.fish\
+Usage: push_profile\
+\
 **root**             Alias for 'sudo -i' to switch to root user\
 File: functions/root.fish\
 Usage: root\
