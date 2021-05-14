@@ -1,6 +1,6 @@
 # Defined in - @ line 1
 function ll
-  if test -e /usr/local/bin/exa
+  if command -sq exa
     exa -laa $argv;
   else
     ls -la $argv;
