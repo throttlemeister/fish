@@ -19,6 +19,8 @@ File: functions/dnf.fish\
 Usage: dnf <package_name>\
 \
 **do**               Execute Ansible playbooks. See 'do help' for more informatio.\
+File: functions/do.fish\
+Usage: do <command>\
 \
 **extract**          Extract an archive, regardless of how it is compressed\
 File: functions/extract.fish\
