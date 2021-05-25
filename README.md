@@ -14,17 +14,11 @@ Bira theme from oh-my-fish (https://github.com/oh-my-fish/theme-bira) was based 
 File: functions/apt.fish\
 Usage: apt <package_name>\
 \
-**bootstrap**        Bootstrap a new server using Ansible\
-File: functions/bootstrap.fish\
-Usage: bootstrap <111.222.333.444>\ 
-\
-**deploy**           Deploy a new server using Ansible\
-File: functions/deploy.fish\
-Usage: deploy\ 
-\
 **dnf**              Alias for 'dnf' to 'sudo dnf' for RedHat based hosts\
 File: functions/dnf.fish\
 Usage: dnf <package_name>\
+\
+**do**               Execute Ansible playbooks. See 'do help' for more informatio.\
 \
 **extract**          Extract an archive, regardless of how it is compressed\
 File: functions/extract.fish\
@@ -38,18 +32,10 @@ Usage: this will be executed by the fish shell upon log in\
 File: functions/fish_prompt.fish\
 Usage: this will be executed by the fish shell upon log in\
 \
-**genprofile**       Generate and compress the profile files so it can be deployed\
-File: functions/genprofile.fish\
-Usage: genprofile\
-\
 **grep**             Alias for grep to add color and line numbers\
 File: functions/grep.fish\
 This function checks if ripgrep (a replacement for grep written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard command.\
 Usage: grep <pattern_to_search_for> <file(s)_to_search_in>\
-\
-**harden**           Execute the system hardening tasks using Ansible\
-File: functions/harden.fish\
-Usage: harden\ 
 \
 **l**                Alias for 'ls'\
 File: functions/l.fish\
@@ -62,17 +48,9 @@ File: functions/lt.fish\
 Usage: lt <directory_to_list>\
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
-**push_profile**     Push updated user profiles to all servers using Ansible\
-File: functions/push_profile.fish\
-Usage: push_profile\ 
-\
 **root**             Alias for 'sudo -i' to switch to root user\
 File: functions/root.fish\
 Usage: root\
-\
-**update**           Update all hosts using Ansible\
-File: functions/update.fish\
-Usage: update\ 
 \
 **up**               Change a number of directories up\
 File: functions/up.fish\
