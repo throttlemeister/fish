@@ -1,7 +1,7 @@
 function fish_greeting
     # Giving us a nice welcome message
     echo -e " Welcome to:"
-    figlet (hostname)
+    figlet (hostname -s)
     echo ""
     inxi -S && inxi -a
     # Setting some variables to make sure the latest profile is available on WSL
