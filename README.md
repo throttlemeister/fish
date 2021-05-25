@@ -14,13 +14,13 @@ Bira theme from oh-my-fish (https://github.com/oh-my-fish/theme-bira) was based 
 File: functions/apt.fish\
 Usage: apt <package_name>\
 \
-~~**bootstrap**        Bootstrap a new server using Ansible\
+**bootstrap**        Bootstrap a new server using Ansible\
 File: functions/bootstrap.fish\
-Usage: bootstrap <111.222.333.444>\ ~~
+Usage: bootstrap <111.222.333.444>\ 
 \
-~~**deploy**           Deploy a new server using Ansible\
+**deploy**           Deploy a new server using Ansible\
 File: functions/deploy.fish\
-Usage: deploy\ ~~
+Usage: deploy\ 
 \
 **dnf**              Alias for 'dnf' to 'sudo dnf' for RedHat based hosts\
 File: functions/dnf.fish\
@@ -47,9 +47,9 @@ File: functions/grep.fish\
 This function checks if ripgrep (a replacement for grep written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard command.\
 Usage: grep <pattern_to_search_for> <file(s)_to_search_in>\
 \
-~~**harden**           Execute the system hardening tasks using Ansible\
+**harden**           Execute the system hardening tasks using Ansible\
 File: functions/harden.fish\
-Usage: harden\ ~~
+Usage: harden\ 
 \
 **l**                Alias for 'ls'\
 File: functions/l.fish\
@@ -62,17 +62,17 @@ File: functions/lt.fish\
 Usage: lt <directory_to_list>\
 These three functions check if exa (a replacement for ls written in Rust) has been installed under /usr/local/bin, and if so, use that and if not, it will use the standard ls command.\
 \
-~~**push_profile**     Push updated user profiles to all servers using Ansible\
+**push_profile**     Push updated user profiles to all servers using Ansible\
 File: functions/push_profile.fish\
-Usage: push_profile\ ~~
+Usage: push_profile\ 
 \
 **root**             Alias for 'sudo -i' to switch to root user\
 File: functions/root.fish\
 Usage: root\
 \
-~~**update**           Update all hosts using Ansible\
+**update**           Update all hosts using Ansible\
 File: functions/update.fish\
-Usage: update\ ~~
+Usage: update\ 
 \
 **up**               Change a number of directories up\
 File: functions/up.fish\
