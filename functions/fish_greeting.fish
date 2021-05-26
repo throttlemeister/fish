@@ -14,6 +14,7 @@ function fish_greeting
     else if test -n "$WSL_INTEROP"
         cd $HOMEDIR
         cp $ONEDRIVE/profile* .
+        mv .config .config.old
         tar xvfz $FILE
         clear
         echo -e " Welcome to:"
@@ -24,5 +25,8 @@ function fish_greeting
         echo "Profile reloaded!"
     else
         echo ""
+    end
+    if test -n "$WSL_INTEROP" && test -e "$HOME/.config"
+        rm -rf .config.old
     end
 end
