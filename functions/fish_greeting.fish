@@ -4,6 +4,7 @@ function fish_greeting
     figlet (hostname -s)
     echo ""
     inxi -S && inxi -a
+    cd
     # Setting some variables to make sure the latest profile is available on WSL
     set HOMEDIR $HOME
     set ONEDRIVE "/mnt/c/Users/throttlemeister/OneDrive/profile"
