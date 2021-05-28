@@ -1,7 +1,7 @@
 # Defined in - @ line 1
 function do
   if not set -q argv[1]
-    /usr/bin/cowsay -f eyes "No argument given. Please type: 'do help' to see how to use this."
+    /usr/bin/cowsay -f eyes -W 50 "No argument given. Please type: 'do help' to see how to use this command."
   else
     switch $argv
       case help
@@ -22,7 +22,7 @@ function do
         /usr/bin/cowsay -f eyes "$argv"ing all servers using Ansible...
         /usr/bin/ansible-playbook $HOME/ansible/site.yml --tags $argv;
       case '*'
-        /usr/bin/cowsay -f eyes "No valid argument provided. Please use 'do help' to see all options!"
+        /usr/bin/cowsay -f eyes -W 50 "No valid argument provided. Please use 'do help' to see all options!"
     end
   end
 end
