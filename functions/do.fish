@@ -6,7 +6,7 @@ function do
     switch $argv[1]
       case help
         echo "To set up a brand-new server, use 'do bootstrap [server_name]'"
-        echo "To create or remove a regular user on a server, use 'do user'"
+        echo "To create or remove a regular user on a server, use 'do user [host_to_create_user_on]'"
         echo "To deploy the user profile configuration, use 'do profile'"
         echo ""
         echo "Use do plus one of the following tags to execute tasks on servers:"
