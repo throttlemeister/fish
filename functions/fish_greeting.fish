@@ -21,7 +21,7 @@ function fish_greeting
         echo -e " Welcome to:"
         figlet (hostname)
         echo ""
-        inxi -S && inxi -a
+        inxi -S && inxi
         echo ""
         echo "Profile reloaded!"
     else
