@@ -3,7 +3,7 @@ function fish_greeting
     echo -e " Welcome to:"
     figlet (hostname -s)
     echo ""
-    inxi -S && inxi -a
+    inxi -S && inxi
     cd
     # Setting some variables to make sure the latest profile is available on WSL
     set HOMEDIR $HOME
