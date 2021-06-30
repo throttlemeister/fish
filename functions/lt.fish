@@ -3,6 +3,6 @@ function lt
   if command -sq exa
     exa -laa -snew --group-directories-first --git $argv;
   else
-    ls -ltr $argv;
+    command ls -ltr $argv;
   end
 end

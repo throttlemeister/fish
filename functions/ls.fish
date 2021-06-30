@@ -1,0 +1,11 @@
+function ls -d 'exa instead of ls'
+  if type --quiet exa
+    exa --group-directories-first --git $argv
+  else
+    command ls --color=auto $argv
+  end
+end
+
+function ll
+    ls -laa $argv
+end
