@@ -9,3 +9,7 @@ end
 function ll
     ls -laa $argv
 end
+
+function l
+    ls $argv
+end
