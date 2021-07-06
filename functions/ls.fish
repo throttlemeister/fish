@@ -19,6 +19,6 @@ function lt
     argparse 'ltr' -- $argv
     exa -laa -snew --group-directories-first --git $argv;
   else
-    command ls -ltr $argv;
+    command ls -ltr $argv[2];
   end
 end
