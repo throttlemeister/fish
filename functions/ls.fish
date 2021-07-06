@@ -16,8 +16,7 @@ end
 
 function lt
   if command -sq exa
-    # argparse 'ltr' -- $argv
-    exa -laa -snew --group-directories-first --git $argv;
+    ls -laa -snew $argv;
   else
     command ls -ltr $argv[2];
   end
