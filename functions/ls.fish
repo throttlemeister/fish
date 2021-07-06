@@ -13,3 +13,12 @@ end
 function l
     ls $argv
 end
+
+function lt
+  if command -sq exa
+    argparse 'ltr' -- $argv
+    exa -laa -snew --group-directories-first --git $argv;
+  else
+    command ls -ltr $argv;
+  end
+end
