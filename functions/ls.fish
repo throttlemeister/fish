@@ -1,6 +1,6 @@
 function ls -d 'exa instead of ls'
   if type --quiet exa
-    exa --group-directories-first --git $argv
+    exa --header --group-directories-first --git $argv
   else
     command ls --color=auto $argv
   end
