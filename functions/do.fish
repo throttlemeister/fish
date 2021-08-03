@@ -18,7 +18,7 @@ function do
         echo ""
       case bootstrap
         $cowsay -f eyes "Bootstrapping new server(s) using Ansible..."
-        /usr/bin/ansible-playbook $HOME/ansible/bootstrap.yml -u root --ask-pass -e bootstrap_host=$var2;
+        /usr/bin/ansible-playbook $HOME/ansible/bootstrap.yml -u root --ask-pass -e bootstrap_host=$var2 -i $HOME/ansible/inventory.yml
       case user
         $cowsay -f eyes "Adding or removing a user to a system using Ansible..."
         /usr/bin/ansible-playbook $HOME/ansible/user.yml -u throttlemeister -K -e host_user=$var2 -i $HOME/ansible/inventory.yml
