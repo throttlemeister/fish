@@ -5,8 +5,8 @@ function genprofile
   set cowsay (command -s cowsay)
   cd $HOME
   $cowsay Creating the profile archives for servers and WSL with all the required files...
-  /usr/bin/tar cvfz $ONEDIR/profile_proper.tar.gz  .gitconfig .secret .bash* .inputrc .profile .ssh/ .config/
-  /usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .secret .bash* .inputrc .profile .ssh/ .config/
-  /usr/bin/tar cvfz $ONEDIR/profile_wsl.tar.gz ansible .gitconfig .secret .bash* .inputrc .profile .ssh/ .config/
-  /usr/bin/tar cvfz $LDIR/profile_wsl.tar.gz ansible .gitconfig .secret .bash* .inputrc .profile .ssh/ .config/
+  /usr/bin/tar cvfz $ONEDIR/profile_proper.tar.gz  .gitconfig .bash* .inputrc .profile .ssh/ .config/
+  /usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .bash* .inputrc .profile .ssh/ .config/
+  /usr/bin/tar cvfz $ONEDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/
+  /usr/bin/tar cvfz $LDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/
 end
