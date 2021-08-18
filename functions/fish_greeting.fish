@@ -30,4 +30,8 @@ function fish_greeting
     if test -n "$WSL_INTEROP" && test -e "$HOME/.config"
         rm -rf .config.old
     end
+    if test -f "$HOME/.secret"
+        echo "Deleting obsolete GitHub credentials"
+        rm $HOME/.secret
+    end
 end
