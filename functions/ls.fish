@@ -18,6 +18,6 @@ function lt
   if command -sq exa
     ls -laa -snew $argv;
   else
-    command ls -ltr $argv[2];
+    command ls -ltr $argv;
   end
 end
