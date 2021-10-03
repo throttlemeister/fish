@@ -18,9 +18,9 @@ end
 
 function __current_path
   if [ (id -u) = "0" ];
-    echo -n (set_color --bold yellow) [(set_color --bold white)(prompt_pwd)(set_color --bold yellow)] (set_color normal)
+    echo -n (set_color --bold yellow)-[(set_color --bold white)(prompt_pwd)(set_color --bold yellow)] (set_color normal)
   else
-    echo -n (set_color --bold blue) [(set_color --bold white)(prompt_pwd)(set_color --bold blue)] (set_color normal) 
+    echo -n (set_color --bold blue)-[(set_color --bold white)(prompt_pwd)(set_color --bold blue)] (set_color normal) 
   end
 end
 
