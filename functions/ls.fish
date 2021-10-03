@@ -7,7 +7,11 @@ function ls -d 'exa instead of ls'
 end
 
 function ll
-    ls -laa $argv
+  if command -sq exa
+    ls -laag $argv
+  else
+    command ls -la $argv
+  end
 end
 
 function l
@@ -16,7 +20,7 @@ end
 
 function lt
   if command -sq exa
-    ls -laa -snew $argv;
+    ls -laa -snew -g $argv;
   else
     command ls -ltr $argv;
   end
