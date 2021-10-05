@@ -1,8 +1,8 @@
 function ls -d 'exa instead of ls'
-  if type --quiet exa
+  if type --quiet exa && test "$argv[1]" != "-ltr"
     exa --header --group-directories-first --git $argv
   else
-    command ls --color=auto $argv
+    command ls --color=always $argv
   end
 end
 
