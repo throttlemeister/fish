@@ -7,16 +7,25 @@ function fish_greeting
     cd
     # Setting some variables to make sure the latest profile is available on WSL
     set HOMEDIR $HOME
-    set ONEDRIVE "/mnt/c/Users/throttlemeister/OneDrive/profile"
-    set FILE profile_wsl.tar.gz
+    if test -n "$WSL_INTEROP"
+        set ONEDRIVE "/mnt/c/Users/throttlemeister/OneDrive/"
+    else if test -e $HOME/OneDrive
+        set ONEDRIVE "/home/throttlemeister/OneDrive/"
+    else
+        set ONEDRIVE ""
+    end
+    set FILE profile_proper.tar.gz
     # Checking if we are on WSL and if so, set the latest profile configuration
-    if test -n "$WSL_INTEROP" && cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/$FILE"
+    if test -n "$ONEDRIVE" && cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/profile/$FILE"
         echo ""
-    else if test -n "$WSL_INTEROP"
+    else if test -n "$ONEDRIVE"
         cd $HOMEDIR
-        cp $ONEDRIVE/profile* .
+        cp $ONEDRIVE/profile/profile* .
         mv .config .config.old
         tar xvfz $FILE
+        if test ! -e $HOME/ansible
+            ln -s $ONEDRIVE/ansible $HOME/ansible
+        end
         clear
         echo -e " Welcome to:"
         figlet (hostname)
@@ -27,7 +36,7 @@ function fish_greeting
     else
         echo ""
     end
-    if test -n "$WSL_INTEROP" && test -e "$HOME/.config"
+    if test -n "$ONEDRIVE" && test -e "$HOME/.config"
         rm -rf .config.old
     end
     if test -f "$HOME/.secret"
