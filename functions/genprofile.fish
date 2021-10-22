@@ -14,4 +14,8 @@ function genprofile
   #/usr/bin/tar cvfz $ONEDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
   #/usr/bin/tar cvfz $LDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
   cp $ONEDIR/profile_proper.tar.gz $HOME/ansible/files/
+  cd $HOME/ansible
+  git commit --all -m "Updating profile"
+  git push
+  cd $HOME
 end
