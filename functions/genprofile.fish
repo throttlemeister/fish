@@ -2,10 +2,10 @@
 function genprofile
   if test -n "$WSL_INTEROP"
     set ONEDIR "/mnt/c/Users/throttlemeister/OneDrive/profile"
-    ln -s /mnt/c/Users/throttlemeister/OneDrive/ansible $HOME/ansible
+    #ln -s /mnt/c/Users/throttlemeister/OneDrive/ansible $HOME/ansible
   else
     set ONEDIR "/home/throttlemeister/OneDrive/profile"
-    ln -s /home/throttlemeister/OneDrive/ansible $HOME/ansible
+    #ln -s /home/throttlemeister/OneDrive/ansible $HOME/ansible
   end
   set LDIR $HOME
   set cowsay (command -s cowsay)
