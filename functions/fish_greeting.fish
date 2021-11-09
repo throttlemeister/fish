@@ -1,7 +1,7 @@
 function fish_greeting
     # Giving us a nice welcome message
     echo -e " Welcome to:"
-    figlet (hostname -s)
+    figlet (hostname -s) | lolcat
     echo ""
     inxi -S && inxi
     cd
@@ -28,7 +28,7 @@ function fish_greeting
         end
         clear
         echo -e " Welcome to:"
-        figlet (hostname)
+        figlet (hostname) | lolcat
         echo ""
         inxi -S && inxi
         echo ""
