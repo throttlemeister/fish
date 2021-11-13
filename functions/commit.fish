@@ -1,6 +1,7 @@
 function commit -d 'Git commit and more git related commands'
     if command -sq git
         git commit --all
+        git push
     else
         echo "Git is not installed, please install git"
     end
