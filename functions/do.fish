@@ -4,7 +4,7 @@ function do
   set var1 $argv[1]
   set var2 $argv[2]
   if not set -q argv[1]
-    $cowsay -f eyes -W 50 "No argument given. Please type: 'do help' to see how to use this command."
+    $cowsay -f ghostbusters -W 50 "No argument given. Please type: 'do help' to see how to use this command."
   else
     switch $var1
       case help
@@ -17,19 +17,19 @@ function do
         echo "Example: do update"
         echo ""
       case bootstrap
-        $cowsay -f eyes "Bootstrapping new server(s) using Ansible..." | lolcat
+        $cowsay -f ghostbusters "Bootstrapping new server(s) using Ansible..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/bootstrap.yml -u root --ask-pass -e bootstrap_host=$var2 -i $HOME/ansible/inventory.yml
       case user
-        $cowsay -f eyes "Adding or removing a user to a system using Ansible..." | lolcat
+        $cowsay -f ghostbusters "Adding or removing a user to a system using Ansible..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/user.yml -u throttlemeister -K -e host_user=$var2 -i $HOME/ansible/inventory.yml
       case profile
-        $cowsay -f eyes "Deploying profile configuration..." | lolcat
+        $cowsay -f ghostbusters "Deploying profile configuration..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/profile.yml -i $HOME/ansible/inventory.yml;
       case setup update hardening inxi
-        $cowsay -f eyes ""$argv"ing all servers using Ansible..." | lolcat
+        $cowsay -f ghostbusters ""$argv"ing all servers using Ansible..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/site.yml -u throttlemeister -K --tags $argv[1] -i $HOME/ansible/inventory.yml;
       case '*'
-        $cowsay -f eyes -W 50 "No valid argument provided. Please use 'do help' to see all options!" | lolcat
+        $cowsay -f ghostbusters -W 50 "No valid argument provided. Please use 'do help' to see all options!" | lolcat
     end
   end
 end
