@@ -8,7 +8,7 @@ end
 
 function ll
   if command -sq exa
-    ls -laag $argv
+    ls -laa -g $argv
   else
     command ls -la $argv
   end
