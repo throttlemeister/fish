@@ -43,4 +43,8 @@ function fish_greeting
         echo "Deleting obsolete GitHub credentials"
         rm $HOME/.secret
     end
+    if test -f "$HOME/.apple"
+        echo "Swapping ALT and Super keys around"
+        echo 1|sudo tee /sys/module/hid_apple/parameters/swap_opt_cmd
+    end
 end
