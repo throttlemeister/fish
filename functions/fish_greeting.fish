@@ -44,7 +44,6 @@ function fish_greeting
         rm $HOME/.secret
     end
     if test -f "$HOME/.apple"
-        echo "Switching keys around"
         echo "Swapping ALT and Super keys around"
         echo 1|sudo tee /sys/module/hid_apple/parameters/swap_opt_cmd
     end
