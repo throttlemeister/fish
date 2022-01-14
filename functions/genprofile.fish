@@ -13,8 +13,8 @@ function genprofile
   cd $HOME
   if not set -q argv[1]
     $cowsay Creating the profile archives for servers and WSL with all the required files...
-    /usr/bin/tar cvfz $ONEDIR/profile_proper.tar.gz  .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
-    /usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
+    /usr/bin/tar cvfz $ONEDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/ .config/fish
+    /usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/ .config/fish
     #/usr/bin/tar cvfz $ONEDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
     #/usr/bin/tar cvfz $LDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
     cp $ONEDIR/profile_proper.tar.gz $HOME/ansible/files/
@@ -26,7 +26,7 @@ function genprofile
     switch $full
       case full
         $cowsay Creating full profile archive...
-        /usr/bin/tar cvfz $HOME/nas/iscsi/profile_full.tar.gz --exclude-tag=no_backup ~/.config .gitconfig .bash* .inputrc .profile .ssh/
+        /usr/bin/tar cvfz $HOME/nas/iscsi/profile_full.tar.gz --exclude-tag=no_backup ~/.config .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/
     end
   end
 end
