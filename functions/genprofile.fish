@@ -26,7 +26,7 @@ function genprofile
     switch $full
       case full
         $cowsay Creating full profile archive...
-        /usr/bin/tar cvfz $HOME/nas/iscsi/Backup/profile_full.tar.gz --exclude-tag=no_backup rsync_backup.sh .config .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/
+        /usr/bin/tar cvfz $HOME/nas/iscsi/Backup/profile_full.tar.gz --exclude-tag=no_backup rsync_backup.sh .config .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/ .fonts/ .themes/ .icons/ .gconf/ .vscode/
     end
   end
 end
