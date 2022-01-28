@@ -37,9 +37,6 @@ function fish_greeting
       echo ""
       echo "Profile reloaded!"
     end
-    if test -n "$ONEDRIVE" && test -e "$HOME/.config"
-        rm -rf .config.old
-    end
     if test -f "$HOME/.secret"
         echo "Deleting obsolete GitHub credentials"
         rm $HOME/.secret
