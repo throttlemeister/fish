@@ -58,9 +58,9 @@ Usage: root\
 File: functions/up.fish\
 Usage: up <#_of_directories_to_go_up>\
 \
-**up2date**          Update a dnf-based system without kernel updates
-File: functions/up2date.fish
-Usage: up2date
+**up2date**          Update a dnf-based system without kernel updates\
+File: functions/up2date.fish\
+Usage: up2date\
 \
 **weather**          Display the weather on the shell\
 File: functions/weather.fish\
