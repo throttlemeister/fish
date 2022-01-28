@@ -18,25 +18,25 @@ function fish_greeting
       cd $HOME
       git clone https://github.com/throttlemeister/ansible.git
     end
-    # Setting some variables to make sure the latest profile is available.
-    set HOMEDIR $HOME
-    set PROFILEDIR $HOME/ansible/files
-    set FILE profile_proper.tar.gz
-    # Checking if we are on the latest profile configuration
-    if cmp -s "$HOMEDIR/$FILE" "$PROFILEDIR/$FILE"
-      echo ""
-    else
-      cd $HOMEDIR
-      cp $PROFILEDIR/$FILE .
-      tar xvfz $FILE
-      clear
-      echo -e " Welcome to:"
-      figlet (hostname) | lolcat
-      echo ""
-      inxi -S && inxi
-      echo ""
-      echo "Profile reloaded!"
-    end
+    # # Setting some variables to make sure the latest profile is available.
+    # set HOMEDIR $HOME
+    # set PROFILEDIR $HOME/ansible/files
+    # set FILE profile_proper.tar.gz
+    # # Checking if we are on the latest profile configuration
+    # if cmp -s "$HOMEDIR/$FILE" "$PROFILEDIR/$FILE"
+    #   echo ""
+    # else
+    #   cd $HOMEDIR
+    #   cp $PROFILEDIR/$FILE .
+    #   tar xvfz $FILE
+    #   clear
+    #   echo -e " Welcome to:"
+    #   figlet (hostname) | lolcat
+    #   echo ""
+    #   inxi -S && inxi
+    #   echo ""
+    #   echo "Profile reloaded!"
+    # end
     if test -f "$HOME/.secret"
         echo "Deleting obsolete GitHub credentials"
         rm $HOME/.secret
