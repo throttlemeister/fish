@@ -5,36 +5,37 @@ function fish_greeting
     echo ""
     inxi -S && inxi
     cd
-    # Setting some variables to make sure the latest profile is available on WSL
-    set HOMEDIR $HOME
-    if test -n "$WSL_INTEROP"
-        set ONEDRIVE "/mnt/c/Users/throttlemeister/OneDrive/"
-    else if test -e $HOME/OneDrive
-        set ONEDRIVE "/home/throttlemeister/OneDrive/"
+    # First make sure we have the latest version of code from git
+    if test -d $HOME/.config/fish/.git
+      cd $HOME/.config/fish; git pull 1>/dev/null; cd
     else
-        set ONEDRIVE ""
+      cd $HOME/.config
+      git clone https://github.com/throttlemeister/fish.git
     end
-    set FILE profile_proper.tar.gz
-    # Checking if we are on WSL and if so, set the latest profile configuration
-    if test -n "$ONEDRIVE" && cmp -s "$HOMEDIR/$FILE" "$ONEDRIVE/profile/$FILE"
-        echo ""
-    else if test -n "$ONEDRIVE"
-        cd $HOMEDIR
-        cp $ONEDRIVE/profile/profile* .
-        mv .config .config.old
-        tar xvfz $FILE
-        if test ! -e $HOME/ansible
-            ln -s $ONEDRIVE/ansible $HOME/ansible
-        end
-        clear
-        echo -e " Welcome to:"
-        figlet (hostname) | lolcat
-        echo ""
-        inxi -S && inxi
-        echo ""
-        echo "Profile reloaded!"
+    if test -d $HOME/ansible/.git
+      cd $HOME/ansible; git pull 1>/dev/null; cd
     else
-        echo ""
+      cd $HOME
+      git clone https://github.com/throttlemeister/ansible.git
+    end
+    # Setting some variables to make sure the latest profile is available.
+    set HOMEDIR $HOME
+    set PROFILEDIR $HOME/ansible/files
+    set FILE profile_proper.tar.gz
+    # Checking if we are on the latest profile configuration
+    if cmp -s "$HOMEDIR/$FILE" "$PROFILEDIR/$FILE"
+      echo ""
+    else
+      cd $HOMEDIR
+      cp $PROFILEDIR/$FILE .
+      tar xvfz $FILE
+      clear
+      echo -e " Welcome to:"
+      figlet (hostname) | lolcat
+      echo ""
+      inxi -S && inxi
+      echo ""
+      echo "Profile reloaded!"
     end
     if test -n "$ONEDRIVE" && test -e "$HOME/.config"
         rm -rf .config.old
