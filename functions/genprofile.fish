@@ -9,8 +9,8 @@ function genprofile
     $cowsay Creating the profile archives for servers and WSL with all the required files...
     #/usr/bin/tar cvfz $ONEDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/ .config/fish
     #/usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/ .config/fish
-    /usr/bin/tar cvfz $PROFILEDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/
-    /usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .ssh/
+    /usr/bin/tar cvfz $PROFILEDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .conkyrc .ssh/
+    /usr/bin/tar cvfz $LDIR/profile_proper.tar.gz  .gitconfig .alacritty.yml .bash* .inputrc .profile .conkyrc .ssh/
     #/usr/bin/tar cvfz $ONEDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
     #/usr/bin/tar cvfz $LDIR/profile_wsl.tar.gz ansible .gitconfig .bash* .inputrc .profile .ssh/ .config/fish
     cd $HOME/ansible
