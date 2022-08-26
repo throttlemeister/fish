@@ -3,10 +3,6 @@ function do
   set cowsay (command -s cowsay) | lolcat
   set var1 $argv[1]
   set var2 $argv[2]
-  switch $var1
-    case up
-      set var1 update
-  end
   if not set -q argv[1]
     $cowsay -f ghostbusters -W 50 "No argument given. Please type: 'do help' to see how to use this command."
   else
@@ -29,7 +25,7 @@ function do
       case profile
         $cowsay -f ghostbusters "Deploying profile configuration..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/profile.yml -i $HOME/ansible/inventory.yml;
-      case setup update hardening inxi
+      case setup update up hardening inxi
         $cowsay -f ghostbusters ""$argv"ing all servers using Ansible..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/site.yml -u throttlemeister -K --tags $argv[1] -i $HOME/ansible/inventory.yml;
       case '*'
