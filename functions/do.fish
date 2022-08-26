@@ -25,7 +25,7 @@ function do
       case profile
         $cowsay -f ghostbusters "Deploying profile configuration..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/profile.yml -i $HOME/ansible/inventory.yml;
-      case setup update up hardening inxi
+      case setup update hardening inxi
         $cowsay -f ghostbusters ""$argv"ing all servers using Ansible..." | lolcat
         /usr/bin/ansible-playbook $HOME/ansible/site.yml -u throttlemeister -K --tags $argv[1] -i $HOME/ansible/inventory.yml;
       case '*'
