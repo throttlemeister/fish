@@ -7,6 +7,12 @@ function do
     case up
       set var1 update
   end
+  if test -e /usr/bin/ansible
+    set apath /usr/bin
+  else 
+  test -e /usr/local/bin/ansible
+    set apath /usr/local/bin
+  end
 
   if not set -q argv[1]
     $cowsay -f ghostbusters -W 50 "No argument given. Please type: 'do help' to see how to use this command."
@@ -23,16 +29,16 @@ function do
         echo ""
       case bootstrap
         $cowsay -f ghostbusters "Bootstrapping new server(s) using Ansible..." | lolcat
-        /usr/bin/ansible-playbook $HOME/ansible/bootstrap.yml -u root --ask-pass -e bootstrap_host=$var2 -i $HOME/ansible/inventory.yml
+        $apath/ansible-playbook $HOME/ansible/bootstrap.yml -u root --ask-pass -e bootstrap_host=$var2 -i $HOME/ansible/inventory.yml
       case user
         $cowsay -f ghostbusters "Adding or removing a user to a system using Ansible..." | lolcat
-        /usr/bin/ansible-playbook $HOME/ansible/user.yml -u throttlemeister -K -e host_user=$var2 -i $HOME/ansible/inventory.yml
+        $apath/ansible-playbook $HOME/ansible/user.yml -u throttlemeister -K -e host_user=$var2 -i $HOME/ansible/inventory.yml
       case profile
         $cowsay -f ghostbusters "Deploying profile configuration..." | lolcat
-        /usr/bin/ansible-playbook $HOME/ansible/profile.yml -i $HOME/ansible/inventory.yml;
+        $apath/ansible-playbook $HOME/ansible/profile.yml -i $HOME/ansible/inventory.yml
       case setup update hardening inxi
         $cowsay -f ghostbusters ""$var1"ing all servers using Ansible..." | lolcat
-        /usr/bin/ansible-playbook $HOME/ansible/site.yml -u throttlemeister -K --tags $var1 -i $HOME/ansible/inventory.yml;
+        $apath/ansible-playbook $HOME/ansible/site.yml -u throttlemeister -K --tags $var1 -i $HOME/ansible/inventory.yml;
       case '*'
         $cowsay -f ghostbusters -W 50 "No valid argument provided. Please use 'do help' to see all options!" | lolcat
     end
