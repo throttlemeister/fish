@@ -1,6 +1,8 @@
 function fish_greeting
     # Setting CPU governor to performance because setting through cron is not reliable
-    /usr/bin/echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor > /dev/null
+    if test -d "$HOME/.performance"
+      /usr/bin/echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor > /dev/null
+    end
     # Giving us a nice welcome message
     echo -e " Welcome to:"
     figlet (hostname -s) | lolcat
