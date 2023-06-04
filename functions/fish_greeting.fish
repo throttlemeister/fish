@@ -11,7 +11,6 @@ function fish_greeting
       cd $HOME/.config/fish; git pull 1>/dev/null; cd
     else
       cd $HOME/.config
-      mv fish fish.org
       git clone https://github.com/throttlemeister/fish.git
     end
     # We do that for the Ansible directory too
