@@ -3,17 +3,6 @@ function do
   set cowsay (command -s cowsay) | lolcat
   set var1 $argv[1]
   set var2 $argv[2]
-  switch $var1
-    case up
-      set var1 update
-  end
-  if test -e /usr/bin/ansible
-    set apath /usr/bin
-  else 
-  test -e /usr/local/bin/ansible
-    set apath /usr/local/bin
-  end
-
   if not set -q argv[1]
     $cowsay -f ghostbusters -W 50 "No argument given. Please type: 'do help' to see how to use this command."
   else

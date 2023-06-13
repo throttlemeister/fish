@@ -7,7 +7,7 @@
 # Some code stolen from oh-my-fish clearance theme: https://github.com/bpinto/oh-my-fish/blob/master/themes/clearance/
 
 function __user_host
-  set fqdn (hostname -f)
+  set fqdn (hostname)
   set -l content 
   if [ (id -u) = "0" ];
     echo -n (set_color --bold yellow)\((set_color --bold red)$USER(set_color --bold yellow)💀(set_color --bold red)$fqdn(set_color --bold yellow)\) (set color normal)
