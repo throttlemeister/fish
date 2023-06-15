@@ -1,9 +1,5 @@
 function up2date
-  if [ (contains Tumbleweed `grep Tumbleweed lsb_release -a`) ];
-    sudo zypper up -y
-  else
-    sudo dnf upgrade -y --refresh --exclude=kernel\*
-  end
+  sudo dnf upgrade -y --refresh --exclude=kernel\*
 end
 
 function up2kernel
