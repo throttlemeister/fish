@@ -26,10 +26,4 @@ function fish_greeting
         echo "Deleting obsolete GitHub credentials"
         rm $HOME/.secret
     end
-    # If we are on an Apple, and there is a file called ''.apple', we swap the 
-    # super/WIN key and ALT key around
-    if test -f "$HOME/.apple"
-        echo "Swapping ALT and Super keys around"
-        echo 1|sudo tee /sys/module/hid_apple/parameters/swap_opt_cmd
-    end
 end
