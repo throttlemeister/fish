@@ -1,4 +1,8 @@
 # Defined in - @ line 1
 function zypper --wraps='sudo zypper'
-  sudo zypper $argv;
+	if test $argv[1] = up
+		sudo zypper dup
+	else
+		sudo zypper $argv;
+	end
 end
