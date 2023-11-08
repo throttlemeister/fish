@@ -10,9 +10,9 @@ function __user_host
   set fqdn (hostnamectl hostname)
   set -l content 
   if [ (id -u) = "0" ];
-    echo -n (set_color --bold yellow)\((set_color --bold red)$USER(set_color --bold yellow)📛(set_color --bold red)$fqdn(set_color --bold yellow)\) (set color normal)
+    echo -n (set_color --bold yellow)\((set_color --bold red)$USER(set_color --bold yellow)☢️(set_color --bold red)$fqdn(set_color --bold yellow)\) (set color normal)
   else
-    echo -n (set_color --bold blue)\((set_color --bold white)$USER(set_color --bold blue)웃(set_color --bold white)$fqdn(set_color --bold blue)\) (set color normal)
+    echo -n (set_color --bold blue)\((set_color --bold white)$USER(set_color --bold blue)🟢(set_color --bold white)$fqdn(set_color --bold blue)\) (set color normal)
   end
 end
 
