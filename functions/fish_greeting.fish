@@ -3,7 +3,11 @@ function fish_greeting
     echo -e " Welcome to:"
     figlet (hostname -s) | lolcat
     echo ""
-    inxi -S && inxi
+    if $USER = root
+      inxi -Sc 12 && inxi -c 12
+    else
+      inxi -S && inxi
+    end
     cd
     # First make sure we have the latest version of code from git. If it's 
     # not there, we clone the repo.
