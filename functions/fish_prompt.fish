@@ -71,6 +71,5 @@ function fish_right_prompt
   end
   set_color -o brwhite
   echo "Time: ";math --scale=1 $CMD_DURATION/1000;echo "s "
-  #date '+ %T'
   set_color normal
 end
