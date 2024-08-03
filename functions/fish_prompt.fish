@@ -69,7 +69,8 @@ function fish_right_prompt
   if [ $st != 0 ];
     echo (set_color red) ↵ $st  (set_color normal)
   end
-  set_color -o 666
-  date '+ %T'
+  set_color -o brwhite
+  echo "Time: ";math --scale=1 $CMD_DURATION/1000;echo "s "
+  #date '+ %T'
   set_color normal
 end
