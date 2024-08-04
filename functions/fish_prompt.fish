@@ -65,11 +65,12 @@ end
 
 function fish_right_prompt
   set -l st $status
+  set -l __dur (math --scale=1 $CMD_DURATION/1000)
 
   if [ $st != 0 ];
     echo (set_color red) ↵ $st  (set_color normal)
   end
   set_color -o brwhite
-  echo "Time: ";math --scale=1 $CMD_DURATION/1000;echo "s "
+  echo "Time: $__dur s"
   set_color normal
 end
