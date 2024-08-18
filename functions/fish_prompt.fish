@@ -46,12 +46,22 @@ function __git_status
   end
 end
 
+function __in_cont
+  if [ -z $CONTAINER_ID ]
+    set in_ct 
+  else
+    set in_ct 
+  end
+  echo -n (set_color yellow) $in_ct (set_color normal)
+end
+
 function fish_prompt
   if [ (id -u) = "0" ];
     echo -n (set_color --bold yellow)"╭─"(set_color normal)
   else
     echo -n (set_color --bold blue)"╭─"(set_color normal)
   end
+  __in_cont 
   __user_host
   __current_path
   __git_status
